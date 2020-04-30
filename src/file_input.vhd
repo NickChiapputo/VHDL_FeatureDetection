@@ -6,7 +6,7 @@ use ieee.math_real."log2";
 use work.kernel_pkg.all;
 
 entity file_input is
-	generic(	filename_in		: string := "C:\Users\Nikolai\Desktop\School\EENG 4760\canny\canny.sim\sim_1\behav\xsim\src\a.ppm";				-- Input file name
+	generic(	filename_in		: string := "src\a.ppm";				-- Input file name
 				file_width		: integer range 1 to 5000 := 10;	-- Image width
 				file_height 	: integer range 1 to 5000 := 10 );	-- Image height
 				
@@ -52,7 +52,7 @@ begin
 			if not openfile then
 				-- If file is not already open, then open it
 				file_open( status, ffile, filename_in, READ_MODE );			-- Open input file for reading
-				file_open( status, ffile_gray, "C:\Users\Nikolai\Desktop\School\EENG 4760\canny\canny.sim\sim_1\behav\xsim\src\out\gray.ppm", WRITE_MODE );	-- Open output file for writing grayed image
+				file_open( status, ffile_gray, "gray.ppm", WRITE_MODE );	-- Open output file for writing grayed image
 								
 				-- Handle case where file was not able to open successfully
 				if status /= OPEN_OK then

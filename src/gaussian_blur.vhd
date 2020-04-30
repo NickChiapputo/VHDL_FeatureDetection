@@ -8,7 +8,7 @@ use work.kernel_pkg.all;				-- Defines kernel, GAUSSIAN_KERNEL_ROWS, and GAUSSIA
 use work.int_to_string_pkg."toString";	-- Converts number to 5 character string
 
 entity gaussian_blur is
-	generic(	filename_out	: string := "C:\Users\Nikolai\Desktop\School\EENG 4760\canny\canny.sim\sim_1\behav\xsim\src\out\bc_out.ppm";	-- Output file name
+	generic(	filename_out	: string := "src\out\bc_out.ppm";	-- Output file name
 				file_width		: integer range 1 to 5000 := 10;					-- Image width
 				file_height 	: integer range 1 to 5000 := 10;					-- Image height
 				kern			: gauss_kernel( 0 to GAUSSIAN_KERNEL_ROWS - 1 ) := getGaussianKernel( GAUSSIAN_KERNEL_ROWS ) );	-- Gaussian blur mask

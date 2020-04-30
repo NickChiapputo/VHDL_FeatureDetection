@@ -7,9 +7,9 @@ use ieee.math_real."sqrt";
 use work.kernel_pkg.all;
 
 entity edge is
-	generic(	filename_in			: string := "C:\Users\Nikolai\Desktop\School\EENG 4760\canny\canny.sim\sim_1\behav\xsim\src\a.ppm";				-- Input file name
-				gaussian_filename	: string :=	"C:\Users\Nikolai\Desktop\School\EENG 4760\canny\canny.sim\sim_1\behav\xsim\src\out\gaussian.ppm";	-- Gaussian blur output file name
-				filename_out		: string := "C:\Users\Nikolai\Desktop\School\EENG 4760\canny\canny.sim\sim_1\behav\xsim\src\out\bc_out.ppm";	-- Output file name
+	generic(	filename_in			: string := "src\a.ppm";				-- Input file name
+				gaussian_filename	: string :=	"src\out\gaussian.ppm";	-- Gaussian blur output file name
+				filename_out		: string := "src\out\bc_out.ppm";	-- Output file name
 				file_width			: integer range 1 to 5000 := 10;
 				file_height 		: integer range 1 to 5000 := 10;
 				gaussian_kernel		: gauss_kernel( 0 to GAUSSIAN_KERNEL_ROWS - 1 ) := getGaussianKernel( GAUSSIAN_KERNEL_ROWS );
